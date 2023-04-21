@@ -1,0 +1,110 @@
+:root {
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(29, 61, 95, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #181e3e;
+  font-family: 'Orbitron', 'Courier New', Courier, monospace;
+}
+
+.App {
+  color: rgb(183, 203, 241);
+  width: 50rem;
+  background-color: black;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.title{
+  text-align: center;
+  margin: 0;
+}
+.setup{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.setup p {
+  margin: 0.4rem ;
+  text-align: center;
+}
+
+.changeTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0rem 0.9rem 0rem ;
+  width: 3.2rem;
+  border-radius: 2rem;
+  margin: 0 0.75rem;
+  background-color: rgba(43, 43, 69, 0.75);
+  background-color: rgba(43, 43, 69, 0.75);
+  font-size: 1rem;
+  border: none;
+  user-select: none;
+
+}
+
+button:hover{
+  background-color: rgba(43, 43, 69, 1);
+  border: 1px solid rgba(217, 217, 238, 0.1);
+  cursor: pointer;
+}
+
+#timer-label{
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  align-items: center;
+  margin: 2rem auto;
+  font-size: 1.4rem;
+  border: 0.05rem solid wheat;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.timerTitle{
+  display: block;
+}
+
+.time-left{
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+  
+}
+
+.buttons button{
+  font-size: 0.6rem;
+  width: 2.5rem;
+}
+
+.signature {
+  color: rgba(255, 255, 255, 0.33);
+  margin-top: 1rem;
+  font-size: 0.5rem;
+  text-align: center;
+  user-select: none;
+}
