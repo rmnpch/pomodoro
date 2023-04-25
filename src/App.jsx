@@ -29,7 +29,7 @@ export default function App() {
   }
 
   function startStop() {
-    console.log('button')
+    console.log("button");
     setStart(!start);
   }
 
@@ -38,9 +38,7 @@ export default function App() {
     setStart(false);
     setRest(5);
     setSession(25);
-    setTimeout(() => {
-      setTimer(1500);
-    }, 100);
+    setTimer(1500);
     setResting(false);
     document.getElementById("beep").currentTime = 0;
   }
@@ -50,21 +48,25 @@ export default function App() {
     isResting ? setTimer(rest * 60) : setTimer(session * 60);
   }, [session, rest, isResting]);
 
+  let timeoutId;
+
   //decrease timer each second
   useEffect(() => {
     if (timer > 0 && start) {
-      console.log('entrando no if')
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setTimer(timer - 1);
       }, 1000);
     } else if (timer === 0) {
-        setResting(!isResting);
-        // play audio each time timer zeroes
-        document.getElementById("beep").play();
-      }
+      setResting(!isResting);
+      // play audio each time timer zeroes
+      document.getElementById("beep").play();
+    }
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [timer, start]);
 
-    return (
+  return (
     <div className="App" id="pomodoro">
       <div>
         <h1 className="title">Pomodoro Timer</h1>
@@ -89,7 +91,6 @@ export default function App() {
               ↓
             </button>
             <span id="session-length">{`${session}`}</span>
-            {/* <span id="session-length">{`${session}:00`}</span> */}
             <button onClick={setIncrementDecrement} id="session-increment">
               ↑
             </button>
