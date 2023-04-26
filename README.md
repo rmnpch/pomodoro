@@ -1,5 +1,7 @@
 # Pomodoro Timer
  This is a simple implementation of a Pomodoro Timer using React. The Pomodoro Technique is a time management method where work is divided into intervals (typically 25 minutes) called "sessions" or "pomodoros", separated by short breaks (typically 5 minutes). The code consists of a functional component called App which represents the main application.
+ 
+ ![Pomodoro](https://github.com/rmnpch/pomodoro/blob/master/pomodoro_preview.png?raw=true)
 
 The code uses hooks provided by React, including useState and useEffect. Here's a brief overview of what the code does:
 
